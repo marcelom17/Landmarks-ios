@@ -9,7 +9,8 @@ import Foundation
 
 final class ModelData: ObservableObject{
     
-   @Published var landmarks: [Landmark] = load("landmarkData.json")
+    @Published var landmarks: [Landmark] = load("landmarkData.json")
+    var hikes: [Hike] = load("hikeData.json") //not @Published because data is never modified after init
 }
 
 //function that reads from json
